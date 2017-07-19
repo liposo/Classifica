@@ -1,0 +1,47 @@
+nav.navbar-main { background: #fff; border-color: #ccc; box-shadow: 0 0 2px 0 #ccc; }
+nav.navbar-main a { color: #f14444; }
+nav.navbar-main ul.navbar-nav a { color: #f14444; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
+nav.navbar-main ul.navbar-nav a:hover,
+nav.navbar-main ul.navbar-nav a:visited,
+nav.navbar-main ul.navbar-nav a:focus,
+nav.navbar-main ul.navbar-nav a:active { background: #fff; }
+nav.navbar-main li.divider { background: #ccc; margin-top: 20px; }
+nav.navbar-main button.navbar-toggle { background: #f14444; border-radius: 2px; }
+nav.navbar-main button.navbar-toggle:hover { background: #999; }
+nav.navbar-main button.navbar-toggle > span.icon-bar { background: #fff; }
+nav.navbar-main ul.dropdown-menu { border: 0; background: #fff; border-radius: 0px; margin: 4px 0; box-shadow: 0 0 4px 0 #ccc; }
+nav.navbar-main ul.dropdown-menu > li > a { color: #444; }
+nav.navbar-main ul.dropdown-menu > li > a:hover { background: #f14444; color: #fff; }
+nav.navbar-main span.badge { background: #f14444; font-weight: normal; font-size: 11px; margin: 0 4px; }
+nav.navbar-main span.badge.new { background: rgba(255, 0, 0, 0.8); color: #fff; }
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.9);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.9);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
