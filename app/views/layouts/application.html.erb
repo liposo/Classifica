@@ -3,18 +3,26 @@
   <head>
     <title>Classifica</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCebMK99l7Z-SaeHMbbIb1rTTAI5LRI4o4&callback=initMap" async defer></script>
+    
+    
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'pages/navbar' %>
+    <%= render 'layouts/navbar' %>
+
+    <% unless flash.empty? %>
+        <script type="text/javascript">
+          <% flash.each do |f| %>
+            <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+              toastr['<%= type %>']('<%= f[1] %>');
+          <% end %>
+        </script>
+    <% end %>
+
     <div class="container">
       <%= yield %>
-    </div>
   </body>
 </html>

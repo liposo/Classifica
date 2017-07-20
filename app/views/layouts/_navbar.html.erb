@@ -7,20 +7,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Classifica</a>
+			<a class="navbar-brand" href="<%= root_path %>">Classifica</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle red-bottom-border" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Anuncios <span class="badge">4</span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Music</span> Anuncio</a></li>
-						<li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Music</span> Anuncio</a></li>
-						<li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Video</span> Anuncio</a></li>
-						<li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Game</span> Anuncio</a></li>
-					</ul>
-				</li>
+				<li><%= link_to 'Anunciar', new_post_path %></li>
 				<% end %>
 				<li class="dropdown">
 					<% if user_signed_in? %>
@@ -48,7 +40,7 @@
                                     <% end %>
 							</div>
 							<div class="bottom text-center m-t-20">
-								New here ? <a href="#"><b>Join Us</b></a>
+								<a><b><%= link_to('Registrar', new_user_registration_path)%></b></a>
 							</div>
 					 </div>
 				    </li>

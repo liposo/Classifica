@@ -1,43 +1,33 @@
-<%= form_for @post do |f| %>
+<div class="row">
+    <div class="col-sm-4">
+      <%= form_for @post do |f| %>
   <fieldset class="form-group">
-    <%= f.label :title %>
+    <h4>Título</h4>
     <%= f.text_field :title, class: "form-control" %>
   </fieldset>
 
-  <h4>Enter either address or coordinates</h4>
   <fieldset class="form-group">
-    <%= f.label :raw_address, 'Address' %>
-    <%= f.text_field :raw_address, class: "form-control" %>
-    <small class="text-muted">You can also enter IP. Your IP is <%= request.ip %></small>
+    <h4>Descrição</h4>
+    <%= f.text_area :description, class: "form-control" %>
   </fieldset>
 
-  <div class="form-group row">
-    <div class="col-sm-1">
-      <%= f.label :latitude %>
-    </div>
-
-    <div class="col-sm-3">
-      <%= f.text_field :latitude, class: "form-control" %>
-    </div>
-
-    <div class="col-sm-1">
-      <%= f.label :longitude %>
-    </div>
-
-    <div class="col-sm-3">
-      <%= f.text_field :longitude, class: "form-control" %>
-    </div>
-
-    <div class="col-sm-4">
-      <a href="#" id="find-on-map" class="btn btn-info btn-sm">Find on the map</a>
-    </div>
-  </div>
-
-  <%= f.submit 'Add!', class: 'btn btn-primary' %>
+  <h4>Endereço</h4>
+  <fieldset class="form-group">
+    <%= f.text_field :raw_address, class: "form-control" %>
+  </fieldset>
+  <h4>Ou selecione a localização pelo mapa</h4>
+  <br>
+  <%= f.submit 'Anunciar!', class: 'btn btn-primary' %>
 <% end %>
-
-<div class="card">
-  <div class="card-block">
-    <div id="map"></div>
-  </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-block">
+          <div id="mapAdd" onload="initMapAdd"></div>
+      </div>
+    </div>
+    </div>
 </div>
+
+
+

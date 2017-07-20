@@ -1,5 +1,7 @@
 @import "bootstrap";
 @import "navbar";
+@import "toastr";
+@import "devise_bootstrap_views";
 
 body {
     overflow: hidden;
@@ -17,4 +19,8 @@ body {
      left: 0;
      width: 100%;
      height: 100%;
+}
+
+.m-t-60 {
+    margin-top: 60px;
 }

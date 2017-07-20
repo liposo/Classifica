@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
     attr_accessor :raw_address
 
+    belongs_to :user
+
     geocoded_by :raw_address
     reverse_geocoded_by :latitude, :longitude
 
