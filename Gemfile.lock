@@ -65,7 +65,7 @@ GEM
     devise-bootstrap-views (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
-    ffi (1.9.18)
+    ffi (1.11.1)
     geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
